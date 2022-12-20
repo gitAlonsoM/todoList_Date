@@ -1,0 +1,184 @@
+
+:root {    /* font-size usado por los rem */
+    font-size: 18px;
+}
+
+body {
+    font-family:'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    height: 100vh; 
+    
+    background-image: url(fondo.png), linear-gradient(to left, #2196f3, #009688);
+}
+
+*:first-letter {  /* la primera letra de cada elemento de la web estara en mayus */
+    text-transform: capitalize;
+}
+
+
+.contenedor {
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: rgb(140, 186, 214);
+    width: 100%;
+    max-width: 20rem;
+    border-radius: 5%;
+}
+
+.contenedorFecha {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(188, 210, 223, 0.3);
+    margin-bottom: 0.5rem;
+    border-radius: 5%;
+    box-shadow: 0 0 1.5rem rgba(255, 255, 255, 0.5);
+    padding: 0.3rem;
+    
+}
+
+.izq{
+    display:flex; /* se usara para apilar los elementos hacia el lado */
+    
+}
+
+
+#numeroDia {
+    font-size: 3rem;
+}
+
+#nombreDia {
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+#hora {
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+#nombreMes,
+#numeroAño  {
+    font-weight: bold;
+    margin-left: 0.5rem;
+    font-size: 1.2rem;
+}
+
+
+input{
+    border: none;
+    outline: none;
+    padding-left: 0.8rem;
+    background-color: white;
+    padding: 0.6rem;
+    border-radius: 0.5rem;
+    width: 14rem;
+    font-size: 0.7rem;
+}
+
+.button {
+    height: 2.1rem;
+    width: 2.1rem;
+    border-radius: 50%;
+    font-size: 1rem;
+    background-color: rgb(211, 211, 211);
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    line-height: 2rem; /* usada para asegurarse que ocupe el tamaño disponible y que los navegadores no lo hagan por defecto */
+    
+}
+
+#contador{
+    cursor:default;
+    font-size: 1rem;
+    height: 2.1rem;
+    width: 2.1rem;
+}
+
+
+
+.tarea {
+    background-color: rgb(240, 247, 248);
+    padding: 0.8rem;
+    margin-top: 1rem;
+    color: rgb(9, 9, 9);
+    cursor: pointer;
+    border-radius: 1%;
+    font-size: 0.8rem;
+}
+
+
+.tachada{
+    background-color: white;
+    text-decoration: line-through;
+    color: black;
+}
+
+.btnEliminar{
+    float: right;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: #7a7474;
+    color: #FFFFFF;
+    cursor:pointer;
+    font-size: 0.7rem;
+    border: none;   
+}
+
+
+.button:hover{
+    color: black;
+}
+
+.btnEliminar:hover{
+    transition: all 0.5s; /* suavisa la transicion de la animacion en un tiempo determinado */
+    animation: pulse 0.9s infinite; /* pulsos infinitos 0.7 segundo entre pulsos */
+}
+
+
+.normal {
+    background-color:lightgrey;
+    color: black;
+    cursor: not-allowed;
+}
+  
+.pulsacion {
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s;
+    animation: pulse 0.9s infinite;
+}
+
+@keyframes pulse {
+/*  en el primer 50% del tiempo de animacion, crece */
+50% {
+transform: scale(1.1);
+}
+/* en el 50% restante del tiempo de animacion... */
+100% {
+    transform: scale(0.96);
+  }
+}
+
+
+
+
+
+
+@media (max-width: 450px) {
+    #inputTarea {
+      width: 50%;
+    }
+    .contenedor{
+        width: 80%;
+    }    
+  }
+

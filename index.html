@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tareas</title>
+    <link rel="stylesheet" href="styles.css">
+
+    
+</head>
+<body>
+
+
+    <div class="contenedor">
+
+        <div class="contenedorFecha">
+            <div class="izq">
+                <div id="numeroDia"></div> <!-- al dejarlo afuera del div de abajo, mantendra su lugar  -->
+                <div ><!-- estos se apilaran -->
+                    <div id="nombreMes"></div>
+                    <div id="numeroAño"></div>
+                    <div id="hora">Javascript</div>
+                </div>
+            </div>
+            <div id="nombreDia"></div> <!-- elemento que estara solo al lado derecho -->
+        </div>
+        
+
+        <form onsubmit="return todoList(event)" >
+            <input type="text" name="inputTarea" id="inputTarea" autocomplete="off" placeholder="Nueva tarea" >
+            <button type="submit" class="button" id="button">+</button>
+            <button class="button" id="contador"><span id="cantidad">0</button> <!-- cantidad de tareas, inicializado en 0 -->
+        </form>
+
+        
+        <div id="lista"></div> <!-- aca se guardaran las tareas creadas -->
+
+    </div>
+
+
+
+    <script src="script.js" type="text/javascript" defer></script>
+</body>
+</html>
